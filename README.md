@@ -37,5 +37,5 @@
    ```
 ## Модели
 
-![Концептуальная модель](https://github.com/katerinavelichko/db_for_chess-tournaments/raw/main/models/conceptual_model.pdf)
+![Концептуальная модель](https://github.com/katerinavelichko/db_for_chess-tournaments/raw/main/models/conceptual_model-1.png)
 
