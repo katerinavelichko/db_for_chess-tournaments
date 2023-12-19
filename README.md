@@ -35,3 +35,6 @@
    ```sql
    SELECT * FROM judges;
    ```
+## Модели
+
+![Концептуальная модель](models/conceptual_model.pdf)
