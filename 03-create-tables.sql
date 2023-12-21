@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS Games
 (
     game_id       SERIAL PRIMARY KEY,
     tournament_id INT         NOT NULL REFERENCES Tournaments (tournament_id),
-    judge_id      INT         NOT NULL,
+    judge_id      INT         NOT NULL REFERENCES Judges (judge_id),
     player_w_id   INT         NOT NULL REFERENCES Players (player_id),
     player_b_id   INT         NOT NULL REFERENCES Players (player_id),
     result        VARCHAR(10) NOT NULL CHECK (result LIKE '_:_' OR result LIKE '0,5:0,5')
