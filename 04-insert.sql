@@ -66,57 +66,66 @@ INSERT INTO Tournaments(location_id, tournament_name, start_date, end_date, impo
 values (4, 'Петербургское лето', '2023-08-22', '2023-08-29', 2);
 
 
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (NULL, '2023-01-01', '2023-12-31', 'Левин Евгений Алексеевич', 2486, '1990-12-23', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (NULL, '2023-01-01', '2023-12-31', 'Захарцов Владимир Вячеславович', 2509, '1993-02-03', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
-values (NULL, '2023-01-01', '2023-12-31', 'Гребнев Алексей Николаевич',  2525, '2007-11-05','RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (NULL, '2023-01-01', '2023-12-31', 'Гребнев Алексей Николаевич', 2525, '2007-11-05', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (NULL, '2023-01-01', '2023-12-31', 'Звягинцев Вадим Викторович', 2567, '1976-12-29', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (NULL, '2023-01-01', '2023-12-31', 'Александров Алексей', 2447, '1992-06-06', 'BLR');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (NULL, '2023-01-01', '2023-12-31', 'Афанасьев Никита Андреевич', 2540, '2004-12-02', 'RUS');
 
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
-values (2, '2023-01-01', '2023-12-31', 'Воробьёва Варвара Алексеевна', 1713, '2004-10-12', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (2, '2023-01-01', '2023-08-01', 'Воробьёва Варвара Алексеевна', 1713, '2004-10-12', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (2, '2023-08-01', '2023-12-31', 'Воробьёва Варвара Алексеевна', 1563, '2004-10-12', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (3, '2023-01-01', '2023-12-31', 'Воробьёва Екатерина Алексеевна', 1787, '2005-08-26', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (2, '2023-01-01', '2023-12-31', 'Щедрова Татьяна Михайловна', 1773, '2004-11-01', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
-values (1, '2023-01-01', '2023-12-31', 'Дудкина Ульяна Дмитриевна', 1947, '2005-03-18', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (1, '2023-01-01', '2023-02-01', 'Дудкина Ульяна Дмитриевна', 1947, '2005-03-18', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (1, '2023-02-01', '2023-12-31', 'Дудкина Ульяна Дмитриевна', 1988, '2005-03-18', 'RUS');
 
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (4, '2023-01-01', '2023-12-31', 'Курченко Егор Сергеевич', 2239, '2007-11-02', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (5, '2023-01-01', '2023-12-31', 'Козлов Алексей Георгиевич', 2069, '2007-09-09', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (3, '2023-01-01', '2023-12-31', 'Толстых Кирилл', 1816, '2007-09-19', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (5, '2023-01-01', '2023-12-31', 'Филиппов Кирилл Павлович', 1972, '2007-05-20', 'RUS');
 
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (1, '2023-01-01', '2023-12-31', 'Стрижевская Серафима Михайловна', 1340, '2012-01-13', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (2, '2023-01-01', '2023-12-31', 'Симкин Александр Павлович', 1412, '1949-08-25', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (3, '2023-01-01', '2023-12-31', 'Апатьев Николай Александрович', 1402, '2012-04-26', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
-values (1, '2023-01-01', '2023-12-31', 'Кириллов Егор Андреевич', 1123, '2004-10-22', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (1, '2023-01-01', '2023-03-01', 'Кириллов Егор Андреевич', 1123, '2004-10-22', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (1, '2023-03-01', '2023-06-01', 'Кириллов Егор Андреевич', 1358, '2004-10-22', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (1, '2023-06-01', '2023-12-31', 'Кириллов Егор Андреевич', 1290, '2004-10-22', 'RUS');
 
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
-values (4, '2023-01-01', '2023-12-31', 'Санчес-Шананин Адриан', 1787, '2010-04-04', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (4, '2023-01-01', '2023-02-23', 'Санчес-Шананин Адриан', 1787, '2010-04-04', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (4, '2023-02-23', '2023-12-31', 'Санчес-Шананин Адриан', 1853, '2010-04-04', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (2, '2023-01-01', '2023-12-31', 'Артемьев Мирон Сергеевич', 1370, '2009-03-29', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (2, '2023-01-01', '2023-12-31', 'Виноградов Артём Павлович', 1534, '2010-03-02', 'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
-values (5, '2023-01-01', '2023-12-31', 'Головченко Богдан', 2007,'2009-12-12',  'RUS');
-INSERT INTO Players(club_id, valid_to_dttm, valid_from_dttm, full_name, rating_elo, date_of_birth, nationality)
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (5, '2023-01-01', '2023-12-31', 'Головченко Богдан', 2007, '2009-12-12', 'RUS');
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (1, '2023-01-01', '2023-12-31', 'Володин Глеб Иванович', 1347, '2009-04-16', 'RUS');
-
 
 
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
