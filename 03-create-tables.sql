@@ -25,8 +25,8 @@ CREATE TABLE IF NOT EXISTS Players
 (
     player_id       SERIAL PRIMARY KEY,
     club_id         INT REFERENCES Clubs (club_id),
-    valid_to_dttm   TIMESTAMP NOT NULL,
     valid_from_dttm TIMESTAMP NOT NULL,
+    valid_to_dttm   TIMESTAMP NOT NULL,
     full_name       TEXT      NOT NULL,
     rating_elo      INT CHECK (rating_elo >= 1000 AND rating_elo <= 3000),
     date_of_birth   DATE,
@@ -76,8 +76,9 @@ CREATE TABLE IF NOT EXISTS Games
 (
     game_id       SERIAL PRIMARY KEY,
     tournament_id INT         NOT NULL REFERENCES Tournaments (tournament_id),
-    judge_id      INT         NOT NULL REFERENCES Judges (judge_id),
+    judge_id      INT         NOT NULL,
     player_w_id   INT         NOT NULL REFERENCES Players (player_id),
     player_b_id   INT         NOT NULL REFERENCES Players (player_id),
     result        VARCHAR(10) NOT NULL CHECK (result LIKE '_:_' OR result LIKE '0,5:0,5')
 );
+
