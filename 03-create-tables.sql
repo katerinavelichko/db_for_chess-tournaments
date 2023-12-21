@@ -63,23 +63,21 @@ CREATE TABLE IF NOT EXISTS Inventory_X_Tournaments
     FOREIGN KEY (tournament_id) REFERENCES Tournaments (tournament_id),
     FOREIGN KEY (inventory_id) REFERENCES Inventory (inventory_id)
 );
-
+CREATE TABLE IF NOT EXISTS Judges
+(
+    judge_id      SERIAL PRIMARY KEY,
+    full_name     TEXT NOT NULL,
+    qualification TEXT NOT NULL CHECK (qualification in ('СВК', '1', '2', '3', 'Ю')),
+    date_of_birth DATE,
+    judge_rating  INT  NOT NULL
+);
 
 CREATE TABLE IF NOT EXISTS Games
 (
     game_id       SERIAL PRIMARY KEY,
     tournament_id INT         NOT NULL REFERENCES Tournaments (tournament_id),
-    judge_id      INT         NOT NULL,
+    judge_id      INT         NOT NULL REFERENCES Judges (judge_id),
     player_w_id   INT         NOT NULL REFERENCES Players (player_id),
     player_b_id   INT         NOT NULL REFERENCES Players (player_id),
     result        VARCHAR(10) NOT NULL CHECK (result LIKE '_:_' OR result LIKE '0,5:0,5')
-);
-
-CREATE TABLE IF NOT EXISTS Judges
-(
-    judge_id      SERIAL PRIMARY KEY,
-    full_name     TEXT NOT NULL,
-    qualification TEXT NOT NULL,
-    date_of_birth DATE NOT NULL,
-    judge_rating  INT  NOT NULL
 );
