@@ -18,6 +18,6 @@ BEFORE INSERT ON chess_project.Players
 FOR EACH ROW
 EXECUTE FUNCTION update_previous_player();
 
---для ппрверки
+--для проверки
 INSERT INTO chess_project.Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (1, CURRENT_DATE, '2023-12-31', 'Пупкин Вася', 2500, '2000-01-01', 'RUS');
