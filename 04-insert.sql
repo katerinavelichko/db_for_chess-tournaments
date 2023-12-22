@@ -101,6 +101,12 @@ values (3, '2023-01-01', '2023-12-31', 'Толстых Кирилл', 1816, '200
 INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (5, '2023-01-01', '2023-12-31', 'Филиппов Кирилл Павлович', 1972, '2007-05-20', 'RUS');
 
+UPDATE players
+SET valid_to_dttm = '2023-10-01'
+WHERE full_name = 'Курченко Егор Сергеевич';
+INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
+values (4, '2023-10-01', '2023-12-31', 'Курченко Егор Сергеевич', 2390, '2007-11-02', 'RUS');
+
 INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
 values (1, '2023-01-01', '2023-12-31', 'Стрижевская Серафима Михайловна', 1340, '2012-01-13', 'RUS');
 INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_elo, date_of_birth, nationality)
@@ -128,43 +134,46 @@ INSERT INTO Players(club_id, valid_from_dttm, valid_to_dttm, full_name, rating_e
 values (1, '2023-01-01', '2023-12-31', 'Володин Глеб Иванович', 1347, '2009-04-16', 'RUS');
 
 
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (1, 2, 15, 16, '1:0');
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (1, 2, 15, 18, '1:0');
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (1, 2, 16, 17, '1:0');
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (1, 2, 16, 18, '0,5:0,5');
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (1, 2, 17, 15, '0:1');
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (1, 2, 18, 17, '0,5:0,5');
 
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (2, 6, 14, 13, '0,5:0,5');
+values (1, 2, 18, 19, '1:0');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (2, 6, 12, 14, '1:0');
+values (1, 2, 18, 21, '1:0');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (2, 6, 14, 11, '1:0');
+values (1, 2, 19, 20, '1:0');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (2, 6, 13, 12, '1:0');
+values (1, 2, 19, 21, '0,5:0,5');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (2, 1, 11, 13, '0:1');
+values (1, 2, 20, 18, '0:1');
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (1, 2, 21, 20, '0,5:0,5');
+
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (2, 1, 13, 14, '0:1');
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (2, 6, 16, 15, '0,5:0,5');
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (2, 6, 14, 16, '1:0');
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (2, 6, 16, 13, '1:0');
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (2, 6, 15, 14, '1:0');
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (2, 1, 13, 15, '0:1');
 
 
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (3, 4, 10, 7, '1:0');
+values (3, 4, 11, 7, '1:0');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (3, 3, 8, 7, '0:1');
+values (3, 3, 9, 7, '0:1');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (3, 3, 7, 9, '0:1');
+values (3, 3, 7, 10, '0:1');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (3, 3, 8, 9, '1:0');
+values (3, 3, 9, 10, '1:0');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (3, 4, 9, 10, '1:0');
+values (3, 4, 10, 11, '1:0');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (3, 4, 10, 8, '1:0');
+values (3, 4, 11, 9, '1:0');
 
 
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
@@ -200,19 +209,25 @@ values (4, 1, 6, 3, '0,5:0,5');
 
 
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 19, 23, '0,5:0,5');
+values (5, 5, 24, 29, '0,5:0,5');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 23, 22, '1:0');
+values (5, 5, 29, 28, '1:0');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 19, 20, '0:1');
+values (5, 5, 24, 26, '0:1');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 20, 23, '0:1');
+values (5, 5, 28, 26, '0:1');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 23, 21, '0,5:0,5');
+values (5, 5, 26, 29, '0:1');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 22, 19, '0:1');
+values (5, 5, 29, 27, '0,5:0,5');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 21, 19, '1:0');
+values (5, 5, 28, 24, '0:1');
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (5, 5, 27, 28, '1:0');
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (5, 5, 26, 27, '0:1');
+INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
+values (5, 5, 27, 24, '1:0');
 
 
 INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
