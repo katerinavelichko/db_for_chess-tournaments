@@ -22,22 +22,28 @@ SELECT
 FROM chess_project.Inventory i;
 
 
--- 3 представление, маскирующее contact_information, оставляя только
+-- 3 представление, маскирующее contact_information, оставляя только последние 4 цифры телефона, либо если
+-- null, то выводит "Нет информации"
 CREATE OR REPLACE VIEW mask_contact_info AS
 SELECT
     club_id,
     club_name,
     club_location,
-    '*(***)***-' || RIGHT(contact_information, 5),
+    case
+        when contact_information is not NULL
+            then '*(***)***-' || RIGHT(contact_information, 5)
+        when contact_information is NULL
+            then 'Нет информации'
+        end as contact_information,
     students_number
 FROM
-    chess_project.clubs;
+    chess_project.clubs c;
 
 -- 4 представление, маскирующее рейтинг судей(они могут стесняться своего рейтинга)
 CREATE or replace VIEW mask_rating_elo AS
 SELECT
    judge_id,
-   repeat('*', length(to_char(judge_rating, '%%%%'))),
+   repeat('*', length(to_char(judge_rating, '%%%%'))) as rating_elo,
    full_name
 FROM
     chess_project.Judges j;
@@ -47,7 +53,7 @@ CREATE OR REPLACE VIEW mask_city AS
 SELECT
     location_id,
     location_name,
-    replace(address, 'Санкт-Петербург', '***')
+    replace(address, 'Санкт-Петербург', '***') as address
 FROM
     chess_project.Location l;
 
