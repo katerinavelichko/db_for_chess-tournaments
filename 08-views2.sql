@@ -3,7 +3,7 @@ set search_path = view_chess_project, public;
 
 -- 1) Представление для отображения рейтинг судей и количества проведенных ими игр
 
-CREATE VIEW judges_statistcs AS
+CREATE OR REPLACE VIEW judges_statistcs AS
 SELECT 
 	j.full_name, j.judge_rating, COUNT(g.game_id) AS games_count
 FROM  
@@ -22,11 +22,11 @@ SELECT
 	t.tournament_name, i.inventory_name, SUM(i.quantity)
 FROM 
 	chess_project.Tournaments t
-JOIN 
+INNER JOIN 
 	chess_project.Inventory_X_Tournaments it 
 	ON 
 	t.tournament_id = it.tournament_id
-JOIN 
+INNER JOIN 
 	chess_project.Inventory i 
 	ON 
 	it.inventory_id = i.inventory_id
@@ -44,18 +44,19 @@ SELECT
     pw.full_name AS player_w_figures,
     pb.full_name AS player_b_figures
 FROM chess_project.Tournaments t
-JOIN chess_project.Games g 
+INNER JOIN
+	chess_project.Games g 
 	ON 
 	t.tournament_id = g.tournament_id
-JOIN 
+INNER JOIN 
 	chess_project.Location l 
 	ON 
 	t.location_id = l.location_id
-JOIN 
+INNER JOIN 
 	chess_project.Players pw 
 	ON 
 	g.player_w_id = pw.player_id
-JOIN 
+INNER JOIN 
 	chess_project.Players pb 
 	ON 
 	g.player_b_id = pb.player_id;
