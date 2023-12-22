@@ -142,8 +142,6 @@ INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (1, 2, 18, 17, '0,5:0,5');
 
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (2, 1, 11, 12, '0:1');
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (2, 6, 14, 13, '0,5:0,5');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (2, 6, 12, 14, '1:0');
@@ -208,16 +206,10 @@ values (5, 5, 23, 22, '1:0');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (5, 5, 19, 20, '0:1');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 22, 20, '0:1');
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (5, 5, 20, 23, '0:1');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (5, 5, 23, 21, '0,5:0,5');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (5, 5, 22, 19, '0:1');
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 21, 22, '1:0');
-INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
-values (5, 5, 20, 21, '0:1');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (5, 5, 21, 19, '1:0');
