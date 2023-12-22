@@ -213,3 +213,35 @@ INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (5, 5, 22, 19, '0:1');
 INSERT INTO Games(tournament_id, judge_id, player_w_id, player_b_id, result)
 values (5, 5, 21, 19, '1:0');
+
+
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (1, 1);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (1, 4);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (1, 6);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (2, 1);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (2, 5);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (2, 7);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (3, 3);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (3, 4);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (3, 6);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (4, 2);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (4, 4);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (4, 7);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (5, 2);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (5, 4);
+INSERT INTO Inventory_X_Tournaments(tournament_id, inventory_id)
+values (5, 8);
